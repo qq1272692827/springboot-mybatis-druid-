@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ccsu.mysql.dao.write.WriteStudentMapper">
+
+
+
+    <insert id="insert" parameterType="com.ccsu.mysql.entity.StudentInfo" >
+        insert into student
+        (sname,age)
+        VALUES
+        (#{username},#{age})
+    </insert>
+
+    <!--
+    <select id="queryBtcByPrikey" parameterType="java.lang.String" resultType="com.zztl.signature.entity.KeyBTC">
+        select address as address
+        ,prikey as prikey from zztl_signature_key_btc
+        where address = #{address}
+    </select>
+
+    <select id="queryPrikeyByAddress" parameterType="java.lang.String" resultType="java.lang.String">
+        select
+        prikey as prikey from zztl_signature_key_btc
+        where address = #{address}
+    </select>
+
+
+
+
+    <delete id="deleteBtcByPrikey" parameterType="java.lang.String" >
+        delete from zztl_signature_key_btc where address = #{address}
+    </delete>
+
+    <update id="updateBtc" parameterType="com.zztl.signature.entity.KeyBTC">
+        update zztl_signature_key_btc
+        set
+        prikey = #{prikey},
+        update_time = NOW()
+        where address = #{prikey}
+    </update>
+
+ -->
+</mapper>
